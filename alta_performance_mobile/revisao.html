@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Revisão JavaScript</title>
+
+    <style>
+
+        /* =========================
+           CSS
+        ========================= */
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <h1>Revisão de JavaScript</h1>
+
+        <!-- NOME -->
+        <div class="campo">
+
+            <label for="nome">
+                Nome:
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+            <button onclick="lerNome()">
+                Enviar nome
+            </button>
+
+        </div>
+
+
+        <!-- IDADE -->
+        <div class="campo">
+
+            <label for="idade">
+                Idade:
+            </label>
+
+            <input
+                type="number"
+                id="idade"
+                placeholder="Digite sua idade"
+            >
+
+            <button onclick="lerIdade()">
+                Enviar idade
+            </button>
+
+        </div>
+
+
+        <!-- NOTA -->
+        <div class="campo">
+
+            <label for="nota">
+                Nota:
+            </label>
+
+            <input
+                type="number"
+                id="nota"
+                placeholder="Digite sua nota"
+                min="0"
+                max="10"
+                step="0.1"
+            >
+
+            <button onclick="verificarNota()">
+                Verificar nota
+            </button>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- LISTA -->
+        <h2>Lista de números</h2>
+
+        <button onclick="mostrarNumeros()">
+            Mostrar números no console
+        </button>
+
+
+        <hr>
+
+
+        <!-- OPERAÇÕES -->
+        <h2>Operações</h2>
+
+        <button onclick="executarOperacoes()">
+            Executar operações
+        </button>
+
+
+        <hr>
+
+
+        <!-- OBJETO -->
+        <h2>Objeto</h2>
+
+        <button onclick="mostrarObjeto()">
+            Mostrar objeto
+        </button>
+
+    </div>
+
+
+    <script>
+
+          //1. PEGANDO ELEMENTOS DO HTML
+ 
+        const campoNome = document.getElementById("nome");
+
+        const campoIdade = document.getElementById("idade");
+
+        const campoNota = document.getElementById("nota");
+
+
+          //2. LER NOME
+ 
+        function lerNome() {
+
+             //Pega o valor digitado no input
+            const nome = campoNome.value;
+
+
+            console.log("========== NOME ==========");
+
+            console.log("Nome digitado:", nome);
+
+
+             //IF
+
+            if (nome === "") {
+
+                console.log("Você não digitou um nome.");
+
+            } else {
+
+                console.log("Olá, " + nome + "!");
+
+                console.log(`Seja bem-vindo(a), ${nome}!`);
+            }
+
+        }
+
+
+          //3. LER IDADE
+ 
+        function lerIdade() {
+
+             //Input retorna STRING!
+            const idadeTexto = campoIdade.value;
+
+
+             //Convertendo STRING para NUMBER
+            const idade = Number(idadeTexto);
+
+
+            console.log("========== IDADE ==========");
+
+            console.log("Idade:", idade);
+
+            console.log("Tipo:", typeof idade);
+
+
+            if (idade <= 0) {
+
+                console.log("Digite uma idade válida.");
+
+                return;
+            }
+
+
+            const idadeFutura = idade + 1;
+
+
+            console.log(
+                `No próximo ano você terá ${idadeFutura} anos.`
+            );
+
+
+             //Outra operação
+
+            const idadePassada = idade - 1;
+
+            console.log(
+                `No ano passado você tinha ${idadePassada} anos.`
+            );
+
+        }
+
+
+          //4. IF / ELSE IF / ELSE
+ 
+        function verificarNota() {
+
+            const nota = Number(campoNota.value);
+
+
+            console.log("========== NOTA ==========");
+
+            console.log("Nota:", nota);
+
+
+            if (nota >= 7) {
+
+                console.log("Aprovado!");
+
+            } else if (nota >= 5) {
+
+                console.log("Recuperação!");
+
+            } else  if (nota >=0 && nota < 0){
+
+                console.log("Reprovado!");
+            } else{
+                console.log("Não há status de aprovação.")
+            }
+
+
+             //Operador lógico
+
+            if (nota >= 0 && nota <= 10) {
+
+                console.log("A nota está dentro do intervalo.");
+
+            } else {
+
+                console.log("Nota inválida.");
+            }
+
+        }
+
+
+          //5. ARRAY
+ 
+        function mostrarNumeros() {
+
+            console.log("========== ARRAY ==========");
+
+
+            const numeros = [10, 20, 30, 40, 50];
+
+
+            console.log("Array completo:");
+
+            console.log(numeros);
+
+
+             //Primeiro elemento
+
+            console.log(
+                "Primeiro elemento:",
+                numeros[0]
+            );
+
+
+             //Segundo elemento
+
+            console.log(
+                "Segundo elemento:",
+                numeros[1]
+            );
+
+
+             //Tamanho do array
+
+            console.log(
+                "Quantidade de elementos:",
+                numeros.length
+            );
+
+
+                           //FOR
+              
+            console.log("Percorrendo com FOR:");
+
+
+            for (let i = 0; i < numeros.length; i++) {
+
+                console.log(
+                    `Posição ${i}: ${numeros[i]}`
+                );
+
+            }
+
+
+                           //ADICIONANDO ELEMENTO
+              
+            numeros.push(60);
+
+
+            console.log(
+                "Depois do push:",
+                numeros
+            );
+
+
+                           //REMOVENDO ELEMENTO
+              
+            numeros.pop();
+
+
+            console.log(
+                "Depois do pop:",
+                numeros
+            );
+
+        }
+
+
+          //6. OPERAÇÕES
+ 
+        function executarOperacoes() {
+
+            console.log("========== OPERAÇÕES ==========");
+
+
+            let a = 10;
+
+            let b = 3;
+
+
+            console.log("a =", a);
+
+            console.log("b =", b);
+
+
+            console.log("Soma:", a + b);
+
+            console.log("Subtração:", a - b);
+
+            console.log("Multiplicação:", a * b);
+
+            console.log("Divisão:", a / b);
+
+            console.log("Resto:", a % b);
+
+
+             //Comparações
+
+            console.log("a é maior que b?", a > b);
+
+            console.log("a é menor que b?", a < b);
+
+            console.log("a é igual a b?", a === b);
+
+
+             //Incremento
+
+            a++;
+
+            console.log("Depois de a++:", a);
+
+
+             //Decremento
+
+            b--;
+
+            console.log("Depois de b--:", b);
+
+        }
+
+
+          //7. OBJETOS
+ 
+        function mostrarObjeto() {
+
+            console.log("========== OBJETO ==========");
+
+
+            const aluno = {
+
+                nome: "Laysa",
+
+                idade: 18,
+
+                curso: "Ciência da Computação",
+
+                nota: 9.5
+
+            };
+
+
+            console.log("Objeto completo:");
+
+            console.log(aluno);
+
+
+             //Acessando propriedades
+
+            console.log(
+                "Nome:",
+                aluno.nome
+            );
+
+
+            console.log(
+                "Idade:",
+                aluno.idade
+            );
+
+
+            console.log(
+                "Curso:",
+                aluno.curso
+            );
+
+
+            console.log(
+                "Nota:",
+                aluno.nota
+            );
+
+
+             //Alterando propriedade
+
+            aluno.nota = 10;
+
+
+            console.log(
+                "Nota depois da alteração:",
+                aluno.nota
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
