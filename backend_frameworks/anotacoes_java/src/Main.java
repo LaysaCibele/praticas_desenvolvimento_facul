@@ -18,4 +18,5 @@ public class Main {
 //Usuario.java com Autenticavel.java
 //CalculadoraFinanceira.java com CalculadoraTeste.java
 //Cliente.java está com Produto.java sozinho (não fiz main)
-//Repositorio está sozinha
+//Repositorio está com TesteRepositorio.java
+//Par.java esttá com TestePar.java
