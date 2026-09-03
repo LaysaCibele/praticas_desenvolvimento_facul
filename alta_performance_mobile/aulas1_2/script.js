@@ -22,7 +22,7 @@
 
 // console.log(texto)
 
-//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-==-=
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-==-=
 
 // Revisão JS
 // Tipos e variáveis
@@ -108,45 +108,45 @@
 // array - declaração
 // todo array tem um sistema de indexação
 // que parte do 0 ao n-1
-//let nomes = ['marlon','carlos','joelma']
+// let nomes = ['marlon','carlos','joelma']
 // localizar o primeiro índice
-//console.log(nomes[0])
-//nomes[2]='ximbinha'
+// console.log(nomes[0])
+// nomes[2]='ximbinha'
 // substituir o terceiro índice
-//console.log(nomes[2])
+// console.log(nomes[2])
 // imprimir o vetor inteiro
-//console.log(nomes)
+// console.log(nomes)
 
-//Arrays
+// Arrays
 
-//let numeros = [1,8, 3, 6, 11]
-//console.log(numeros.length)
-//console.log(numeros[numeros.length -1])
-//numeros[2] = 89
+// let numeros = [1,8, 3, 6, 11]
+// console.log(numeros.length)
+// console.log(numeros[numeros.length -1])
+// numeros[2] = 89
 
 // criar um array vazio
-//let num = []
-//num[9] = 'oi'
+// let num = []
+// num[9] = 'oi'
 
-//console.log(num)
-//let coisas = [10,true,'Laysaa',()=>{console.log('oi')}]
+// console.log(num)
+// let coisas = [10,true,'Laysaa',()=>{console.log('oi')}]
 
-//let matriz = [
+// let matriz = [
 //    [10,12], 
 //    [6,5]
-//]
+// ]
 
-//console.log(matriz[0][0])
-//console.log(coisas[3])
+// console.log(matriz[0][0])
+// console.log(coisas[3])
 
-//array methods
-//let numeros = [1,5,3,8,4]
-//numeros.push(10)
+// array methods
+// let numeros = [1,5,3,8,4]
+// numeros.push(10)
 // numeros.pop()
 // console.log(numeros.pop)
 // console.log(numeros)
 
-//inserir e remover no primeiro´index
+// inserir e remover no primeiro´index
 
 // numeros.unshift(12) //insere
 // numeros.shift()
@@ -172,7 +172,7 @@
 // })
 
 
-//funções auto-executável não podem ser reutilizadas
+// funções auto-executável não podem ser reutilizadas
 // (function imprime(){
 //       console.log("oi")
 // })()
@@ -183,7 +183,7 @@
 //     console.log('oi')
 // }
 
-//arrow function
+// arrow function
 // let imprime = a => console.log(a)
 
 
@@ -200,14 +200,14 @@
 // console.log(soma(2, 4))
 
 
-//callback uma função serve como entrada de parâmetro para outra função
+// callback uma função serve como entrada de parâmetro para outra função
 
-let numeros = [5,8,6,7]
-let mapeados = numeros.map((elemento)=>{
-    return elemento % 2 != 0 ? 'impar':'par'
-})
+// let numeros = [5,8,6,7]
+// let mapeados = numeros.map((elemento)=>{
+//     return elemento % 2 != 0 ? 'impar':'par'
+// })
 
-let filtrados = numeros.filter((elemento)=>{
-    return elemento > 6
-})
-console.log(numeros)
+// let filtrados = numeros.filter((elemento)=>{
+//     return elemento > 6
+// })
+// console.log(numeros)
