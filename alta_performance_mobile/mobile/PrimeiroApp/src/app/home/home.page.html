@@ -1,0 +1,12 @@
+<ion-content [fullscreen]="true">
+<!-- interpolação -->
+<article>
+<h1 [style.background]="cor">Interpolação</h1>
+<p>Nome: {{ nome }}</p>
+<p>Idade daqui à 10 anos: {{ idade+10 }}</p>
+<p>É maior de idade? {{ idade>=18?"de maió":"de menó" }}</p>
+<img src="{{ url }}" alt="">
+<p>O computador diz: {{ cumprimenta() }}</p>
+<ion-button expand="block" (click)="mudaCor()">Click me</ion-button>
+</article>
+</ion-content>
